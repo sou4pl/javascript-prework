@@ -1,13 +1,15 @@
-let argButtonName, computerMove, playerMove, randomNumber;
+let argButtonName;
 const 
-buttonPaper = document.getElementById('button-paper'), 
-buttonRock = document.getElementById('button-rock'),
-buttonScissors = document.getElementById('button-scissors');
+  buttonPaper = document.getElementById('button-paper'), 
+  buttonRock = document.getElementById('button-rock'),
+  buttonScissors = document.getElementById('button-scissors');
 
 //whole game script
 function buttonClicked(argButtonName) {
   clearMessages();
   console.log(argButtonName + ' został kliknięty');
+
+let computerMove, playerMove, randomNumber;
 
 //change chosen number for text argument
 function getMoveName(argMoveId) {
