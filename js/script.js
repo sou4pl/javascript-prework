@@ -1,23 +1,18 @@
-var argButtonName, buttonPaper, buttonRock, buttonScissors, buttonTest;
-
-buttonTest = document.getElementById('button-test');
-buttonRock = document.getElementById('button-rock');
-buttonPaper = document.getElementById('button-paper');
+let argButtonName;
+const 
+buttonPaper = document.getElementById('button-paper'), 
+buttonRock = document.getElementById('button-rock'),
 buttonScissors = document.getElementById('button-scissors');
 
-/**
- * Describe this function...
- */
+//whole game script
 function buttonClicked(argButtonName) {
   clearMessages();
   console.log(argButtonName + ' został kliknięty');
 
 
-var argComputerMove, argMoveId, argPlayerMove, computerMove, playerInput, playerMove, randomNumber;
+var computerMove, playerMove, randomNumber;
 
-/**
- * change chosen number for text argument
- */
+//change chosen number for text argument
 function getMoveName(argMoveId) {
   console.log('wywołano funkcję getMoveName z argumentem: ' + argMoveId);
   if (argMoveId == 1) {
@@ -32,9 +27,7 @@ function getMoveName(argMoveId) {
   }
 }
 
-/**
- * calculate game result
- */
+//calculate game result
 function displayResult(argPlayerMove, argComputerMove) {
   console.log('wywołano funkcję displayResults z argumentami: ' + argPlayerMove + ', ' + argComputerMove);
   if (argPlayerMove == 'papier' && argComputerMove == 'kamień') {
@@ -48,10 +41,9 @@ function displayResult(argPlayerMove, argComputerMove) {
   } else {
     printMessage('Przegrywasz :(');
   }
-  printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
+  printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove); 
 }
 
-console.log('wybór ruchu gracza to: ' + playerInput);
 playerMove = argButtonName;
 console.log('ruch gracza to: ' + playerMove);
 randomNumber = Math.floor(Math.random() * 3 + 1);
