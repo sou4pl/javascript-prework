@@ -1,4 +1,4 @@
-let argButtonName;
+let argButtonName, computerMove, playerMove, randomNumber;
 const 
 buttonPaper = document.getElementById('button-paper'), 
 buttonRock = document.getElementById('button-rock'),
@@ -8,9 +8,6 @@ buttonScissors = document.getElementById('button-scissors');
 function buttonClicked(argButtonName) {
   clearMessages();
   console.log(argButtonName + ' został kliknięty');
-
-
-var computerMove, playerMove, randomNumber;
 
 //change chosen number for text argument
 function getMoveName(argMoveId) {
